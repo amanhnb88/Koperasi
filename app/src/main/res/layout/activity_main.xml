@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/schemas/android/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="24dp">
+    android:padding="24dp"
+    android:background="#09090b">
 
     <TextView
         android:layout_width="wrap_content"
@@ -11,14 +12,14 @@
         android:text="KSP Semy Riry"
         android:textSize="24sp"
         android:textStyle="bold"
-        android:textColor="@color/white" />
+        android:textColor="#FFFFFF" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Omnia vestra in caritate fiant"
         android:textSize="14sp"
-        android:textColor="@color/zinc_500"
+        android:textColor="#71717a"
         android:layout_marginBottom="32dp" />
 
     <LinearLayout
@@ -33,14 +34,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Total Piutang Berjalan"
-            android:textColor="@color/zinc_500"
+            android:textColor="#71717a"
             android:textSize="14sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Rp 45.500.000"
-            android:textColor="@color/netflix_red"
+            android:textColor="#E50914"
             android:textSize="32sp"
             android:textStyle="bold"
             android:layout_marginTop="8dp" />
@@ -52,10 +53,9 @@
         android:layout_height="60dp"
         android:background="@drawable/bg_button_red"
         android:text="Pencairan Baru"
-        android:textColor="@color/white"
+        android:textColor="#FFFFFF"
         android:textSize="16sp"
-        android:textStyle="bold"
-        app:backgroundTint="@null"
-        xmlns:app="http://schemas.android.com/apk/res-auto" />
+        android:textAllCaps="false"
+        android:textStyle="bold" />
 
 </LinearLayout>
