@@ -6,9 +6,7 @@
         android:allowBackup="true"
         android:label="KSP Semy Riry"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        
-        <activity
+        android:theme="@style/Theme.Koperasi"> <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
