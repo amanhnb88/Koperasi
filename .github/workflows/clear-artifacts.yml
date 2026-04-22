@@ -1,0 +1,23 @@
+name: Bersihkan File APK Lama (Artifak)
+
+on:
+  workflow_dispatch: 
+  schedule:
+    - cron: '0 0 * * 0' 
+
+jobs:
+  hapus-artifak:
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write 
+      contents: read # <--- INI BARIS YANG KITA TAMBAHKAN
+    steps:
+      - name: 🗑️ Proses Hapus Artifak
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "Mencari dan menghapus semua file APK/Artifak dari riwayat build..."
+          gh api repos/${{ github.repository }}/actions/artifacts \
+            --paginate \
+            -q '.artifacts.[].url' \
+            | xargs -I {} gh api -X DELETE {} || echo "Artifak bersih, tidak ada file APK lama."
